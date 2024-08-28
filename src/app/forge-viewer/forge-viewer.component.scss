@@ -1,0 +1,128 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: ArtifaktElement;
+}
+
+#header, #preview, #overlay {
+    position: absolute;
+    width: 100%;
+}
+
+#header {
+    height: 3em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#preview, #overlay {
+    top: 3em;
+    bottom: 0;
+}
+
+#overlay {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: none;
+}
+
+#overlay > .notification {
+    margin: auto;
+    padding: 1em;
+    max-width: 50%;
+    background: white;
+}
+
+#header > * {
+    height: 2em;
+    margin: 0 0.5em;
+    font-size: 1em;
+    font-family: ArtifaktElement;
+}
+
+#header .title {
+    flex: 1 0 auto;
+    height: auto;
+}
+
+#models {
+    flex: 0 1 auto;
+    min-width: 2em;
+}
+
+#preview {
+    position: absolute;
+    top: 3em; /* Matches the height of the header */
+    bottom: 0;
+    width: 100%;
+    height: calc(100vh - 3em); /* Subtract header height from the full viewport height */
+}
+
+
+#part-info {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    
+    padding: 10px;
+    display: none;
+    z-index: 1000; /* Ensure the part-info div is above other elements */
+    border-radius: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+
+    overflow: auto;
+}
+
+#comments {
+    max-height: 70%; /* Set a max-height to limit the space it takes */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    //margin: 10px 0; /* Optional: add some margin around the list */
+    //padding: 5px;
+    list-style-type: none; /* Remove default bullet points if needed */
+    //list-style-position: outside;
+}
+
+#add-button{
+    width: 100%;
+}
+
+#part-info-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#part-name{
+    width: 80%;
+}
+
+#part-info-close-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+/*
+style="position: absolute; 
+top: 10px; 
+right: 10px; 
+background-color: rgba(0,0,0,0.7); 
+color: white; 
+padding: 10px; 
+display: none;"
+*/
+

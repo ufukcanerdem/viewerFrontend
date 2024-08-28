@@ -1,0 +1,7 @@
+{
+  "name": "viewer-Test-05-08-24",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
